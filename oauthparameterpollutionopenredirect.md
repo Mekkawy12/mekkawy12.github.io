@@ -1,4 +1,4 @@
-# Stole the OAuth code or token with an open redirect because of a parameter pollution .
+# Steal the OAuth code or token with an open redirect because of a parameter pollution .
 
 ## How:
 
