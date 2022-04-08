@@ -25,3 +25,12 @@ So where is the problem? at the backend however that it recieves the first redir
 Ehat is the impact? the impact is high this application provides oauth apps to third party applications so every third party application is affected by it, It can lead to account takeover or sensitive data leak .
 
 
+### My Info :
+
+#### Intigriti : https://app.intigriti.com/researcher/profile/mekky
+
+#### Linkedin : https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/
+
+#### Twitter : https://twitter.com/Mekky49295157
+
+
