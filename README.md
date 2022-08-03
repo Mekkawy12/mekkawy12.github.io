@@ -1,13 +1,19 @@
 <h1 align="center">Hi 👋, I'm Muhammed Mekkawy</h1>
 <h3 align="center">A Cyber Security Enthusiast, Penetration Tester & .....</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mekkawy12" alt="mekkawy12" /></a> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=mekkawy12&label=Profile%20views&color=0e75b6&style=flat" alt="mekkawy12" /> </p>
 
 <p align="left"> <a href="https://twitter.com/mekky49295157" target="blank"><img src="https://img.shields.io/twitter/follow/mekky49295157?logo=twitter&style=for-the-badge" alt="mekky49295157" /></a> </p>
 
 - My Graduation Project [Container Runtime Compliance](https://github.com/ahmadateya/crcc)
 
+- 🌱 I’m currently learning **Malware Analysis**
+
 - Bug Bounty Hunter on [Intigriti](https://app.intigriti.com/researcher/profile/mekky)
+
+- 📝 My Vulnerability Writeups [https://mekkawy12.github.io/](https://mekkawy12.github.io/)
+
+- 📫 How to reach me **mekkawymuhammed0@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
