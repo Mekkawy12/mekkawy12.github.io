@@ -24,6 +24,7 @@ So where is the problem? at the backend however that it recieves the first redir
 
 Ehat is the impact? the impact is high this application provides oauth apps to third party applications so every third party application is affected by it, It can lead to account takeover or sensitive data leak .
 
+### Range Hall Of Fame : https://www.range.co/security/hall-of-fame (as Mekky)
 
 ### My Info :
 
