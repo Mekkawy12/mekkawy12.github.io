@@ -7,7 +7,7 @@ account.
 
 ## Open Redirection Vulnerability:
 
-- The application had an endpoint like this ***/logout*** that takes a ***GET*** parameter called ***r***.
+- The application had an endpoint like this <span style="color:red"> ***/logout*** </span> that takes a ***GET*** parameter called ***r***.
 - The parameter ***r*** takes an endpoint to be redirected at like this ***/logout?r=/dashboard***.
 - So I tried to to put a valid host to see what it does like this ***logout?r=https://program.com/***.
 - The application redirected me so, I new that I can play with it to see what else I can get.
