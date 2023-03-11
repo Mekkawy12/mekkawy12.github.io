@@ -8,7 +8,7 @@ account.
 ## Open Redirection Vulnerability:
 
 - The application had an endpoint like this <span style="color:red"> ***/logout*** </span> that takes a <span style="color:red">***GET***</span> parameter called <span style="color:red">***r***</span>.
-- The parameter ***r*** takes an endpoint to be redirected at like this <span style="color:red">***/logout?r=/dashboard***</span>.
+- The parameter <span>***r***</span> takes an endpoint to be redirected to like this <span style="color:red">***/logout?r=/dashboard***</span>.
 - So I tried to to put a valid host to see what it does like this <span style="color:red">***logout?r=https://program.com/***</span>.
 - The application redirected me so, I new that I can play with it to see what else I can get.
 - I tried to set the host name to another domain like <span style="color:red">***r=https://evil.com/***</span> and the application responded with <span style="color:red">***invalid redirect uri***</span>.
@@ -19,9 +19,10 @@ account.
   <span style="color:red">***r=https://evil.com@program.com***</span><br>
   
 - The last one was the road to success from this list. However, it's still no redirection because the application will always redirect to itself.
+
 - So at first why we tried these payloads?
   - When I try to find an open redirection I try first to know what url format is allowed or understandable by browsers. So, the meaning of <span style="color:red">***https://john@program.com***</span> is that you are trying to access <span style="color:red">***program.com***</span> as username <span style="color:red">***john***</span>. You can try this on firefox or chrome. 
-  - So, by knowing this I was thinking what if the developer is using a regex that validates this format and when someone tries to change the value of <span style="color:red">***r***</span> to <span style="color:red">***https://evil.com@program.com***</spna> he validetes it as a valid value because he know that it's the samething. The user will be redirected to program.com at the end too.
+  - So, by knowing this I was thinking what if the developer is using a regex that validates this format and when someone tries to change the value of <span style="color:red">***r***</span> to <span style="color:red">***https://evil.com@program.com***</span> he validetes it as a valid value because he know that it's the samething. The user will be redirected to program.com at the end too.
   - Another question comes to my head. What is the set of characters allowed before <span style="color:red">***@***</span> I tried to test it on the browser to see what is allowed. And, I have found that the browser when I but an ecnoded value like this <span style="color:red">***john%2f***</span> as username it validtes it and sees it as a valid value. You can try it <span style="color:red">***john%2f@google.com***</span>.
   - I tried to set <span style="color:red">***r***</span> to <span style="color:red">***https://evil.com%252f@program.com/***</span> and sent the request. The response successfully redirected me to <span style="color:red">***https://evil.com/@program.com/***</span>
   - So, let's break the payload.
