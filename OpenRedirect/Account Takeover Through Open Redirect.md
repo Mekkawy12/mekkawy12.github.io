@@ -7,6 +7,12 @@ account.
 
 ## Open Redirection Vulnerability:
 
+### Original Request
+
+![alt text](original_redirect.png)
+
+### Steps
+
 - The application had an endpoint like this <span style="color:red"> ***/logout*** </span> that takes a <span style="color:red">***GET***</span> parameter called <span style="color:red">***r***</span>.
 - The parameter <span style="color:red">***r***</span> takes an endpoint to be redirected to like this <span style="color:red">***/logout?r=/dashboard***</span>.
 - So I tried to to put a valid host to see what it does like this <span style="color:red">***logout?r=https://program.com/***</span>.
@@ -34,8 +40,17 @@ account.
     - As you can see the browser will treat <span style="color:red">***/@program.com***</span> as a path to <span style="color:red">***https://evil.com***</span> and the redirection successfully happenes to <span style="color:red">**evil.com**</span>.
 - Another important thing is that the <span style="color:red">***/logout***</span> endpoint sends any get parameter with the new redirection like this <span style="color:red">**/logout?r=https://evil.com%252f@program.com&heap=heap**</span> the redirection will be like this <span style="color:red">**https://evil.com/@program.com/?r=https://evil.com%252f@program.com&heap=heap**</span>.
 
+### Exploited Request
+
+![alt text](exploited_request.png)
 
 ## Exploiting The Login Functionality.
+
+### Original Request
+
+![alt text](magic_link_original_request.png)
+
+### Steps
 
 - The applicaiton has a functionality to send you a magic link to login with it. This endpoint takes an <span style="color:red">***email***</span> and <span style="color:red">***redirect_uri***</span> parameters. So, after trying to find a vulnerability with the email I tried to find what I can do with the <span style="color:red">***redirect_uri***</span>.
 - The <span style="color:red">***redirect_uri***</span> takes a url and the applicaion appends a <span style="color:red">**JWT**</span> token to it as a GET parameter and sends it to the user.
@@ -47,14 +62,17 @@ account.
 - By this, I was able to get the jwt as an attacker and using the jwt I was able to login.
 - So the same scenario is done if you want to target another user. You need an email and after collecting the jwt you can use it to login to the user's account.
 
+### Exploited Request
+
+![alt text](magic_link_exploited_request.png)
 
 ### My Info :
 
-#### Yeswehack  : https://yeswehack.com/user/mekky
+#### Yeswehack  : <a href="https://yeswehack.com/user/mekky">https://yeswehack.com/user/mekky</a>
 
-#### Intigriti  : https://app.intigriti.com/researcher/profile/mekky
+#### Intigriti  : <a href="https://app.intigriti.com/researcher/profile/mekky">https://app.intigriti.com/researcher/profile/mekky</a>
 
-#### Linkedin   : https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/
+#### Linkedin   : <a href="https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/">https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/</a>
 
-#### Twitter    : https://twitter.com/Mekky49295157
+#### Twitter    : <a href="https://twitter.com/Mekky49295157">https://twitter.com/Mekky49295157</a>
 
