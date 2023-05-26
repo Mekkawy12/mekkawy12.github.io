@@ -2,10 +2,9 @@
 
 ## How
 
-While testing the api I thought about downloading the apk version of this app to see if there are another endpoint that I can test it further. After decompiling the api I
-noticed an endpoint that changes the email of the user and I figure it out that this endpoint is open to <span style="color:red">***CSRF***</span> vulnerability but The 
-endpoint needed an additional information for the attack to be successful that I was able to get using the invitation feature. After this I used the login functionality
-to deliver the attack with a better way and eleminate the factor of complexity.
+While testing the api I thought about downloading the apk version of this app to see if there are another endpoints that I can test it further. After decompiling the apk I
+noticed an endpoint that changes the email of the user and I noticed that this endpoint is open to <span style="color:red">***CSRF***</span> vulnerability, but The 
+endpoint needed an additional information for the attack to be successful and I was able to get it using the invitation feature. After this I used the login functionality to deliver the attack with a better way and eleminate the factor of complexity.
 
 # The CSRF Vulnerability
 
