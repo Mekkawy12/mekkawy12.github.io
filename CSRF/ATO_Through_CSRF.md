@@ -18,7 +18,8 @@ to deliver the attack with a better way and eleminate the factor of complexity.
   request and the application didn't really check on anything else.
 - But as you can see if want to target a specific user how I need to know his accountid.
 - So how I am going to get his accountid?
-
+- 
+![alt text](email_update_flow.png)
 
 # The Invitation Feature
 
@@ -34,6 +35,9 @@ to deliver the attack with a better way and eleminate the factor of complexity.
 - And yes with this action I recieved a response with all the invitations I sent with the email and the <span style="color:red">***accountid***</span> of the user.
 - With this the <span style="color:red">***CSRF***</span> attack was ready to be delivered. But can I find a better way to deliever this attack?
 
+![alt text](create_invitation_flow.png)
+
+![alt text](get_all_invitations_flow.png)
 
 # The Login Functionality
 
@@ -46,6 +50,10 @@ to deliver the attack with a better way and eleminate the factor of complexity.
   <span style="color:red">***r=/v2/account?action=requestemailupdate&email=[OUR_EMAIL]&accountid=[THE_VICTIM_ACCOUNTID]***</span>.
 - Sending this with the login request the applicaiton is going to append it to the magic link and as soon as the user click it the application is going to sign him in
   then is going to redirect him to the <span style="color:red">***CSRF***</span> endpoint to change his email and with the we were able to takeover the user account.
+  
+  ![alt text](magic_link_flow.png)
+  
+## My Info
   
 #### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/user/mekky</a>
 
