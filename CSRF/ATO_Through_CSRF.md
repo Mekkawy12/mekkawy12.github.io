@@ -18,7 +18,7 @@ to deliver the attack with a better way and eleminate the factor of complexity.
   request and the application didn't really check on anything else.
 - But as you can see if want to target a specific user how I need to know his accountid.
 - So how I am going to get his accountid?
-- 
+
 ![alt text](email_update_flow.png)
 
 # The Invitation Feature
