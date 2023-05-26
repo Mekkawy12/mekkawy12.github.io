@@ -19,7 +19,7 @@ to deliver the attack with a better way and eleminate the factor of complexity.
 - But as you can see if want to target a specific user how I need to know his accountid.
 - So how I am going to get his accountid?
 
-![alt text](email_update_flow.png)
+  ![alt text](email_update_flow.png)
 
 # The Invitation Feature
 
@@ -35,9 +35,9 @@ to deliver the attack with a better way and eleminate the factor of complexity.
 - And yes with this action I recieved a response with all the invitations I sent with the email and the <span style="color:red">***accountid***</span> of the user.
 - With this the <span style="color:red">***CSRF***</span> attack was ready to be delivered. But can I find a better way to deliever this attack?
 
-![alt text](create_invitation_flow.png)
+  ![alt text](create_invitation_flow.png)
 
-![alt text](get_all_invitations_flow.png)
+  ![alt text](get_all_invitations_flow.png)
 
 # The Login Functionality
 
