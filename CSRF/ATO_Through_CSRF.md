@@ -54,7 +54,7 @@ endpoint needed an additional information for the attack to be successful and I 
   
 ## My Info
   
-#### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/user/mekky</a>
+#### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/hunters/mekky</a>
 
 #### Intigriti  : <a href="https://app.intigriti.com/researcher/profile/mekky">https://app.intigriti.com/researcher/profile/mekky</a>
 
