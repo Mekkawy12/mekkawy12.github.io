@@ -66,9 +66,9 @@ account.
 
 ![alt text](magic_link_exploited_request.png)
 
-### My Info :
+### My Info
 
-#### Yeswehack  : <a href="https://yeswehack.com/user/mekky">https://yeswehack.com/user/mekky</a>
+#### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/hunters/mekky</a>
 
 #### Intigriti  : <a href="https://app.intigriti.com/researcher/profile/mekky">https://app.intigriti.com/researcher/profile/mekky</a>
 
