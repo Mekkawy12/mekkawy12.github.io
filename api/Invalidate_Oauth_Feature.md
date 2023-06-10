@@ -1,6 +1,6 @@
 # Generate Oauth Code For Any User Within Any Partner
 
-## How:
+## How
 
 The application has an Oauth functionality in order for partners to interact with it's api and get other users resources after their consent. After looking at
 the api documentation I noticed that when the partners try to get the user's oauth code it deals with another subdomain and endpoint that is different than the
@@ -40,7 +40,8 @@ or others it depends on the api itself some of them are using the request verbs 
 - But what if I changed it to another user id? Doing this I was able to get the oauth code of this user within any partner I just need to provide its client_id.
 - This is an idor vulnerability.
 - In order to complete the attack, I wanted to see if I can generate accesstoken for using the oauth code I got in order to communicate with the api directly.
--
+
+![alt text](get_authorization_code.png)
 
 ## The requesttoken action 
 
@@ -51,3 +52,15 @@ or others it depends on the api itself some of them are using the request verbs 
 - I have found if I removed the client_secret value the application doesn't validate on the client_secret which means I can get the accesstoken if I have the code that is generated from the previous step.
 - By this we were able to get the user's data within any partner or organization. This vulnerability can even lead to account takeover on the third-party applications if they are using this feature to login the user or linking thier account with thier account on the provider.
 
+![alt text](requesttoken.png)
+
+
+## My Info
+  
+#### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/hunters/mekky</a>
+
+#### Intigriti  : <a href="https://app.intigriti.com/researcher/profile/mekky">https://app.intigriti.com/researcher/profile/mekky</a>
+
+#### Linkedin   : <a href="https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/">https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/</a>
+
+#### Twitter    : <a href="https://twitter.com/Mekky49295157">https://twitter.com/Mekky49295157</a>
