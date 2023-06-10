@@ -7,4 +7,5 @@
   <li><a href="range_oauth_csrf_ato">Account Takeover because of an Oauth Csrf</a></li>
  <li><a href="OpenRedirect/Account Takeover Through Open Redirect">Account Takeover Through Open Redirect</a></li>
  <li><a href="CSRF/ATO_Through_CSRF">Account Takeover Through CSRF</a></li>
+ <li><a href="https://mekkawy12.github.io/api/Invalidate_Oauth_Feature">Generate Oauth Code For Any User Within Any Partner</a></li>
 </ul> 
