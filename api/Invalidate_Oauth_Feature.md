@@ -41,7 +41,7 @@ or others it depends on the api itself some of them are using the request verbs 
 - This is an idor vulnerability.
 - In order to complete the attack, I wanted to see if I can generate accesstoken for using the oauth code I got in order to communicate with the api directly.
 
-![alt text](get_authorization_code.png)
+ ![alt text](get_authorization_code.png)
 
 ## The requesttoken action 
 
@@ -52,7 +52,7 @@ or others it depends on the api itself some of them are using the request verbs 
 - I have found if I removed the client_secret value the application doesn't validate on the client_secret which means I can get the accesstoken if I have the code that is generated from the previous step.
 - By this we were able to get the user's data within any partner or organization. This vulnerability can even lead to account takeover on the third-party applications if they are using this feature to login the user or linking thier account with thier account on the provider.
 
-![alt text](requesttoken.png)
+ ![alt text](requesttoken.png)
 
 
 ## My Info
