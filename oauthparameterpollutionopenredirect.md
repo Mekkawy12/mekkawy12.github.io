@@ -1,4 +1,4 @@
-# Steal the OAuth code or token with an open redirect because of parameter pollution
+# Account Takeover Through OAuth Parameter Pollution
 
 ## How:
 
@@ -17,21 +17,22 @@ So I knew that the problem of appending the two redirect_uri is not from the bac
 So what about adding @ sign rather than using dot of course this didn't work also because if you redirected to an endpoint like this **https://third.com/callback/,@evil.com** it won't redirect you to evil.com, So what is about encoding, If you tried to paste this in a browser admin@evil.com you will see that a browser like a firefox treats the first part before @ as a user name so it's like connecting to a server using ssh if you tried it before, So leave the second redirect_uri with a value like this @evil.com and double encode the special characters in the first redirect_uri like this **https://third.com%252Fcallback%252F**.
 
 
-Why double-encode it? because, If you are redirected to an endpoint like this **https://third.com%2Fcallback%2F,@evil.com** you will see that the browser translates %2F to / and still redirects you to third.com so to come across this, encode the / two times so that the first time the browser decodes it %2F but the second time it won't decode it to/so that the final redirection will be like this **https://third.com%2Fcallback%2F,@evil.vom?code=[some code]&state=[some state]** and you will be redirected to evil.com with the oauth code and you succeeded to steal the OAuth code.
+Why double-encode it? because, If you are redirected to an endpoint like this **https://third.com%2Fcallback%2F,@evil.com** you will see that the browser translates %2F to / and still redirects you to third.com so to come across this, encode the / two times so that the first time the browser decodes it %2F but the second time it won't decode it to/so that the final redirection will be like this **https://third.com%2Fcallback%2F,@evil.vom?code=[some code]&state=[some state]** and you will be redirected to evil.com with the OAuth code and you succeeded to steal the OAuth code.
 
 
 So where is the problem? at the backend however that it receives the first redirect_uri like this **https://third.com%252Fcallback%252F** but what it does is that it double decodes it and then validate it against the stored value and of course, it will be true so it will return the OAuth code, but if it didn't double decode it won't be true so even if the user redirected to evil.com he won't be redirected with the OAuth code so the impact is low.
 
-What is the impact? the impact is high this application provides oauth apps to third-party applications so every third-party application is affected by it, It can lead to account takeover or sensitive data leak.
+What is the impact? the impact is high this application provides OAuth apps to third-party applications so every third-party application is affected by it, It can lead to account takeover or sensitive data leak.
 
-### Range Hall Of Fame : https://www.range.co/security/hall-of-fame (as Mekky)
 
-### My Info :
+## My Info
 
-#### Intigriti : https://app.intigriti.com/researcher/profile/mekky
+#### Intigriti  : <a href="https://app.intigriti.com/researcher/profile/mekky">https://app.intigriti.com/researcher/profile/mekky</a>
 
-#### Linkedin : https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/
+#### Yeswehack  : <a href="https://yeswehack.com/hunters/mekky">https://yeswehack.com/hunters/mekky</a>
 
-#### Twitter : https://twitter.com/Mekky49295157
+#### Linkedin   : <a href="https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/">https://www.linkedin.com/in/muhammed-mekkawy-1504821b2/</a>
+
+#### Twitter    : <a href="https://twitter.com/Mekky49295157">https://twitter.com/Mekky49295157</a>
 
 
